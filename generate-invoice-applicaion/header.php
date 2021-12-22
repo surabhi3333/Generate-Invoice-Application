@@ -8,3 +8,6 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/custom.js"></script>
 	</head>
+	<nav class="navbar navbar-expand-lg" style="background-color:#72b8c4;">
+  		<a class="navbar-brand" style="width: 90%;text-align: right;margin: 0 auto;color: #fff" href="index.php">Logout</a>
+    </nav>

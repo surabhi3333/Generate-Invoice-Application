@@ -39,7 +39,23 @@ $invoice_list = $obj_invoice->getInvoiceList();
                 <td><?php echo $invoice_date ?></td>
                 <td><?php echo $invoice['first_name']."".$invoice['last_name']; ?></td>
                 <td>
-                  <?php echo '<a href="print_invoice.php?invoice_id='.$invoice["invoice_id"].'" >Generate Invoice</a>'; ?>
+                  <?php //echo '<a href="print_invoice.php?invoice_id='.$invoice["invoice_id"].'" >Generate Invoice</a>'; ?>
+                  <div class="container">
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#printInvoice">Generate Invoice</button>
+                    <!-- Modal -->
+                    <div id="printInvoice" class="modal fade" role="dialog">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+                          <div class="modal-body">
+                            <?php echo '<embed src="print_invoice.php?invoice_id='.$invoice["invoice_id"].'" frameborder="0" width="100%" height="400px" >'; ?>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </td>
               </tr>
         <?php } } else{

@@ -109,7 +109,7 @@ $dompdf->loadHtml(html_entity_decode($html_string));
 $dompdf->setPaper('A4', 'landscape'); 
 // Render the HTML as PDF 
 $dompdf->render(); 
-$invoiceFileName = 'Invoice-'.$invoice_list['invoice_id'];
+$invoiceFileName = 'Invoice-'.$invoice_list['invoice_id'].'-'.strtotime('now');
 $dompdf->stream($invoiceFileName, array("Attachment" => 0));
 ?>   
    
